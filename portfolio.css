@@ -1,4 +1,4 @@
-/* Responsive improvements for portfolio header and hero image */
+
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@300;400;700&display=swap');
 
 * {
@@ -6,7 +6,285 @@
 
 }
 body{
-    background: fixed linear_gradient(black,gray,grey);
+    background: fixed linear_gradient(black,gray,gre@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@300;400;700&display=swap');
+
+
+:root {
+  --bg-main: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  --card-bg: linear-gradient(135deg, #1f2430, #2c2f45, #3a2a45);
+  --shadow: 0 8px 24px rgba(0,0,0,0.25);
+  --text-light: #f4f6f8;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-main);
+  font-family: system-ui, sans-serif;
+  color: var(--text-light);
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 56px;
+  background: grey;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 18px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: black;
+  background: #ffd3e6;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+/* ===============================
+   HEAD SECTION
+================================ */
+.head {
+  margin-top: 70px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.head span {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+/* ===============================
+   TYPING ANIMATION (H1)
+================================ */
+.head h1 {
+  font-size: clamp(22px, 5vw, 36px);
+  font-weight: 700;
+  margin: 1rem auto;
+  color: white;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+
+  width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid gold;
+
+  animation:
+    typing 3.8s steps(40, end) forwards,
+    blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* ===============================
+   HERO IMAGE
+================================ */
+.headphoto {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ===============================
+   BIO SECTION
+================================ */
+.bio {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.bio-text {
+  font-family: Georgia, serif;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .bio {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ===============================
+   PROFILE IMAGE
+================================ */
+.idimg {
+  width: 180px;
+  height: 180px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.idimg:hover {
+  transform: scale(1.05);
+  border-color: gold;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.skills,
+#projects,
+#education,
+.body,
+footer {
+  background: var(--card-bg);
+  padding: 1.25rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin: 1.5rem auto;
+  max-width: 1200px;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+h4 {
+  margin-top: 1rem;
+}
+
+/* ===============================
+   SKILLS
+================================ */
+figure {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 1.5rem auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+figcaption {
+  background: gray;
+  color: gold;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: monospace;
+  max-width: 300px;
+  text-align: center;
+}
+
+#skillsimg {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid white;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* ===============================
+   IFRAMES
+================================ */
+iframe {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin: 10px;
+}
+
+/* ===============================
+   LINKS
+================================ */
+a {
+  color: #8fd3ff;
+}
+
+a:hover {
+  color: black;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+/* ===============================
+   ANIMATED ROLE TEXT
+================================ */
+#sk::before {
+  content: "developer";
+  color: gold;
+  animation: change 4s ease-in-out infinite;
+}
+
+@keyframes change {
+  0% { content: "web developer"; }
+  20% { content: "software engineer"; }
+  40% { content: "front-end developer"; }
+  60% { content: "data scientist"; }
+  80% { content: "full-stack developer"; }
+  100% { content: "back-end developer"; }
+}
+
+
+.funny {
+  font-family: 'Bangers', 'Comic Neue', cursive;
+  color: #ffd3e6;
+}
+y);
 }
 
 #skillsimg {
@@ -321,7 +599,7 @@ h1 {
 }
 }
 
-/* Optional: responsive button styling used elsewhere across the site */
+
 .btn,
 button,
 .button {
@@ -355,7 +633,7 @@ button:hover,
     }
 }
 
-/* small utility tweaks */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -380,7 +658,7 @@ button:hover,
     }
 }
 
-/* Playful / funny font utility - apply .funny to any element */
+
 .funny {
     font-family: 'Bangers', 'Comic Neue', 'Segoe UI', cursive;
     color: #ffd3e6;
@@ -388,4 +666,5 @@ button:hover,
     letter-spacing: 0.5px;
 
 }
+
 
