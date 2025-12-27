@@ -6,7 +6,7 @@
 
 }
 body{
-    background: fixed black;
+    background: fixed linear_gradient(black,gray,grey);
 }
 
 #skillsimg {
@@ -388,3 +388,4 @@ button:hover,
     letter-spacing: 0.5px;
 
 }
+
