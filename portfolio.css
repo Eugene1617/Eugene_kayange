@@ -45,6 +45,7 @@ nav {
   font-size: 18px;
   box-shadow: var(--shadow);
   z-index: 1000;
+    text-transform:capitalize;
 }
 
 nav a {
@@ -183,6 +184,7 @@ footer {
   box-shadow: var(--shadow);
   margin: 1.5rem auto;
   max-width: 1200px;
+    text-transform:capitalize;
 }
 
 /* ===============================
@@ -666,5 +668,6 @@ button:hover,
     letter-spacing: 0.5px;
 
 }
+
 
 
